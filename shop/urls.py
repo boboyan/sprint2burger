@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, re_path, include
 from . import views
 
 app_name = 'shop'
@@ -9,4 +9,5 @@ urlpatterns = [
          name='product_list_by_category'),
     path('<int:id>/<slug:slug>/', views.product_detail,
          name='product_detail'),
+    path('contactus', views.contactus, name='contactus'),
 ]

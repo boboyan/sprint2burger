@@ -7,18 +7,21 @@
   <link href="{% static "css/base.css" %}" rel="stylesheet">
 </head>
 <body>
+
   <div id="header">
     <a href="/" class="logo">Speed Burger</a>
   </div>
 
   <div id="subheader">
-  <a href="contactus.html">Contact Us</a>
-  <a href="aboutus.html">About Us</a>
+
 
     <div class="cart">
+
+  <a href="contactus.html">Contact Us</a>
+
       {% with total_items=cart|length %}
           {% if cart|length > 0 %}
-            Your cart: 
+            Your cart:
             <a href="{% url "cart:cart_detail" %}">
               {{ total_items }} item{{ total_items|pluralize }},
               ${{ cart.get_total_price }}
