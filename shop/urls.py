@@ -1,6 +1,7 @@
 from django.urls import path, re_path, include
 from . import views
-
+from . import views
+from django.urls import path, re_path, include
 app_name = 'shop'
 
 urlpatterns = [
@@ -9,5 +10,5 @@ urlpatterns = [
          name='product_list_by_category'),
     path('<int:id>/<slug:slug>/', views.product_detail,
          name='product_detail'),
-    path('contactus', views.contactus, name='contactus'),
+    path('contactus/', views.contactus, name='contactus'),
 ]

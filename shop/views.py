@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import Category, Product
 from cart.forms import CartAddProductForm
 
+from django.shortcuts import render
 
 
 def product_list(request, category_slug=None):
@@ -31,4 +32,4 @@ def product_detail(request, id, slug):
 
 
 def contactus(request):
-    return render(request, 'shop/contactus.html')
+    return render(request, 'shop/contactus.html',{'shop':contactus})
