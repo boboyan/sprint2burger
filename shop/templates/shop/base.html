@@ -16,7 +16,11 @@
 
 
     <div class="cart">
-
+    {% if user.is_authenticated %}
+        Hi {{ user.get_username }}, Welcome!
+    {% else %}
+        Hi guest, Welcome! Please <a>log in</a>!
+    {% endif %}
   <a href="contactus.html">Contact Us</a>
 
       {% with total_items=cart|length %}
@@ -27,7 +31,7 @@
               ${{ cart.get_total_price }}
             </a>
           {% else %}
-            Your cart is empty.
+            Your cart <a href="{% url "cart:cart_detail" %}"> is empty </a>.
           {% endif %}
         {% endwith %}
     </div>
