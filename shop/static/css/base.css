@@ -220,7 +220,8 @@ ul.errorlist {
 }
 
 .product-list .item img {
-    width:50%;
+    max-width:50%;
+    height: 8em;
     margin-bottom:8px;
 }
 
@@ -363,4 +364,15 @@ form div.field {
     background:#efefef;
     color:#666;
     border-radius:4px;
+}
+
+/* Style for menu */
+.item > a {
+    display: block;
+    color: #444444;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+.item > span {
+    font-size: 1.2em;
 }
