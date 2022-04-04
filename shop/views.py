@@ -56,3 +56,7 @@ def signup(request):
     else:
         form = SignUpForm()
     return render(request, 'shop/signup.html', {'form': form})
+
+
+def index(request):
+    return render(request, 'shop/index.html')
