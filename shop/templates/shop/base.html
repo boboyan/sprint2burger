@@ -13,18 +13,17 @@
   </div>
 
   <div id="subheader">
-        <a class="contact" href="contactus/">Contact Us</a>
-        <a  class="contact"  href="aboutus/">About Us</a>
-        <a class="contact" href="{% url 'login' %}">Login</a>
+                    <a class="contact" href="contactus/">Contact Us</a>
+                    <a  class="contact"  href="aboutus/">About Us</a>
+      <span class="contact">
+         {% if user.is_authenticated %}
+                        Welcome: {{ user.get_username }}
 
-
-    {% if user.is_authenticated %}
-        Hi {{ user.get_username }}, Welcome!
-    {% else %}
-        Hi guest, Welcome! Please <a>log in</a>!
-    {% endif %}
-
-
+                        <a class="contact" href="{% url 'logout' %}?next={{ request.path }}">Logout</a>
+                    {% else %}
+                        <a class="contact" href="{% url 'login' %}?next={{ request.path }}">Hi, Please Login</a>
+                    {% endif %}
+      </span>
       {% with total_items=cart|length %}
           {% if cart|length > 0 %}
             Your cart:
@@ -33,9 +32,10 @@
               ${{ cart.get_total_price }}
             </a>
           {% else %}
-             <a href="{% url "cart:cart_detail" %}"> My Cart </a>
+             <a class="cart" href="{% url "cart:cart_detail" %}"> My Cart </a>
           {% endif %}
         {% endwith %}
+  </div>
 
   </div>
   <div id="content">
