@@ -9,7 +9,7 @@
 <body>
 
   <div id="header">
-    <a href="/" class="logo">Speed Burger</a>
+      <a href="/" class="logo"><h1>Speed Burger</h1></a>
   </div>
 
   <div id="subheader">
@@ -17,7 +17,7 @@
         <a  class="contact"  href="aboutus/">About Us</a>
         <a class="contact" href="{% url 'login' %}">Login</a>
 
-    <div class="welcome">
+
     {% if user.is_authenticated %}
         Hi {{ user.get_username }}, Welcome!
     {% else %}
@@ -36,7 +36,7 @@
              <a href="{% url "cart:cart_detail" %}"> My Cart </a>
           {% endif %}
         {% endwith %}
-    </div>
+
   </div>
   <div id="content">
     {% block content %}

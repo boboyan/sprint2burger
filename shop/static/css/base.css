@@ -120,10 +120,10 @@ ul.errorlist {
 
 
 #header {
-    padding:10px 100px;
-    font-size:18px;
+    padding:30px 100px;
+    font-size:30px;
     overflow:auto;
-      margin-left: 220px;
+    margin-left: 550px;
 
 }
 
@@ -160,14 +160,13 @@ ul.errorlist {
 }
 
 #subheader .contact {
-      display: inline;
+    display: inline;
     list-style-type: none;
     margin: 5px;
     padding: 2px;
-    margin-left: 100px;
+    margin-left: 250px;
     color: black;
 }
-
 
 #content {
     padding:0 100px;
