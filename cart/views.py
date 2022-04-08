@@ -32,3 +32,10 @@ def cart_detail(request):
                               initial={'quantity': item['quantity'],
                               'update': True})
     return render(request, 'cart/detail.html', {'cart': cart})
+
+def contactus(request):
+    return render(request, 'cart/contactus.html',{'cart':contactus})
+
+
+def aboutus(request):
+    return render(request, 'cart/aboutus.html',{'cart':aboutus})
