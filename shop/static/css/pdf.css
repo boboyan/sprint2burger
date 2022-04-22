@@ -74,7 +74,7 @@ h1 {
 
 
 .contact_body {
-    background: url(../img/contact-bg.jpeg) no-repeat center center fixed;
+    background: url(/shop/static/img/contact-bg.jpeg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -85,7 +85,7 @@ h1 {
 /* About Us CSS*/
 
 .about_body{
-    background: url(../img/about_us.jpeg) no-repeat center center fixed;
+    background: url(/shop/static/img/about_us.jpeg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
