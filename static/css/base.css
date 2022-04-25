@@ -37,6 +37,9 @@ a.button.light {
     text-align:left;
 }
 
+
+
+
 .text-right {
     text-align:right;
 }
@@ -56,6 +59,10 @@ table th, table td {
 
 tbody tr:nth-child(odd) {
     background:#efefef;
+}
+
+tbody tr.subtotal {
+    background:#ccc;
 }
 
 thead th, tbody tr.total {
@@ -113,9 +120,11 @@ ul.errorlist {
 
 
 #header {
-    padding:10px 100px;
-    font-size:18px;
+    padding:30px 100px;
+    font-size:30px;
     overflow:auto;
+    margin-left: 500px;
+
 }
 
 #subheader {
@@ -123,7 +132,16 @@ ul.errorlist {
     color:#444;
     padding:15px 100px;
     overflow:auto;
+    margin-bottom: 20px;
+
+
 }
+
+
+
+
+
+
 
 #header .logo {
     font-family: 'Ubuntu', sans-serif;
@@ -133,9 +151,25 @@ ul.errorlist {
     margin-right:10%;
 }
 
+
+#subheader .contact {
+    display: inline;
+    list-style-type: none;
+    margin: 5px;
+    padding: 2px;
+    margin-left: 120px;
+    color: black;
+    font-family: Gadugi;
+}
+
 #subheader .cart {
-    float:right;
-    padding-top:4px;
+    display: inline;
+    list-style-type: none;
+    margin: 5px;
+    padding: 2px;
+    margin-left: 90px;
+    color: black;
+    font-family: Gadugi;
 }
 
 #content {
@@ -189,8 +223,18 @@ ul.errorlist {
 }
 
 .product-list .item img {
-    width:100%;
+    max-width:50%;
+    height: 8em;
     margin-bottom:8px;
+}
+
+.horizontal_menu li {
+    display: inline;
+    list-style-type: none;
+    margin: 5px;
+    padding: 2px;
+    margin-left: 10px;
+    color: black;
 }
 
 .product-detail {
@@ -249,6 +293,68 @@ ul.errorlist {
     float:right;
 }
 
+.neg {
+    color:#dc1616;
+}
+
+.languages {
+   float:right;
+   padding-top:4px;
+   font-size:14px;
+}
+
+.languages ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+    float:left;
+}
+
+.languages ul li {
+    float:left;
+    margin:0 0 0 10px;
+    font-size:14px;
+}
+
+.languages p {
+    float:left;
+    margin:0;
+}
+
+.recommendations {
+    clear:both;
+}
+
+.recommendations div {
+    float:left;
+}
+
+.recommendations img {
+    width:200px
+}
+
+.recommendations p {
+    clear:both;
+}
+
+.recommendations.cart {
+    width:60%;
+    float:left;
+    overflow:auto;
+}
+
+.recommendations.cart h3 {
+    margin-top:0;
+}
+
+.recommendations.cart .item {
+    margin-right:10px;
+}
+
+.recommendations.cart img {
+    width:120px;
+}
+
 /* braintree hosted fields */
 form div.field {
     font-size:13px;
@@ -261,4 +367,15 @@ form div.field {
     background:#efefef;
     color:#666;
     border-radius:4px;
+}
+
+/* Style for menu */
+.item > a {
+    display: block;
+    color: #444444;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+.item > span {
+    font-size: 1.2em;
 }
