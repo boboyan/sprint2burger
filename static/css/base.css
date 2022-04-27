@@ -152,25 +152,7 @@ ul.errorlist {
 }
 
 
-#subheader .contact {
-    display: inline;
-    list-style-type: none;
-    margin: 5px;
-    padding: 2px;
-    margin-left: 120px;
-    color: black;
-    font-family: Gadugi;
-}
 
-#subheader .cart {
-    display: inline;
-    list-style-type: none;
-    margin: 5px;
-    padding: 2px;
-    margin-left: 90px;
-    color: black;
-    font-family: Gadugi;
-}
 
 #content {
     padding:0 100px;
